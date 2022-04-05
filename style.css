@@ -365,7 +365,7 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.dog-box {
+.한가인-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -374,7 +374,7 @@ body {
   width: 100%;
   background-color: rgba(27, 175, 234, 0.2);
 }
-.dog-bar {
+.한가인-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -382,7 +382,7 @@ body {
   border-radius: 10px;
   background-color: rgba(27, 175, 234, 1);
 }
-.cat-box {
+.김고은-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -391,7 +391,7 @@ body {
   width: 100%;
   background-color: rgba(251, 176, 59, 0.2);
 }
-.cat-bar {
+.김고은-bar {
   position: absolute;
   top: 0;
   left: 0;
