@@ -355,6 +355,10 @@
 						default:
 							resultMessage = "닮은사람없음";					
 				}
+				$('.file-upload-image2').attr("src", "secondImages/" + imageMessage + ".jpg");
+				console.log("세컨사진 삽입");
+				$('.file-upload-image2').show();
+				console.log("세컨사진 쇼");
 			} else{
 				console.log("여자 체크");
 				switch(prediction[0].className){
@@ -425,13 +429,16 @@
 						default:
 							resultMessage = "닮은사람없음";
 				}
+				$('.file-upload-image2').attr("src", "secondImages/" + imageMessage + ".jpg");
+				console.log("세컨사진 삽입");
+				$('.file-upload-image2').show();
+				console.log("세컨사진 쇼");
 			}
 				
 				
 				
 				
-				$('.file-upload-image2').attr("src", "secondImages/" + imageMessage + ".jpg");
-				$('.file-upload-image2').show();
+				
 				// 원래
 				$('.result-message').html(resultMessage);
 				
