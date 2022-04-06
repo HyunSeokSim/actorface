@@ -219,7 +219,16 @@ body {
   text-transform: uppercase;
 }
 
+
+
 .file-upload-image {
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto;
+  padding: 10px;
+}
+
+.file-upload-image2{
   max-height: 60%;
   max-width: 60%;
   margin: auto;
@@ -331,7 +340,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.나연-box {
+.나연-box, .류준열-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -340,7 +349,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.나연-bar {
+.나연-bar, .류준열-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -348,7 +357,7 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.김지원-box {
+.김지원-box, .오혁-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -357,7 +366,7 @@ body {
   width: 100%;
   background-color: rgba(88, 180, 120, 0.2);
 }
-.김지원-bar {
+.김지원-bar, .오혁-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -365,7 +374,7 @@ body {
   border-radius: 10px;
   background-color: rgba(88, 180, 120, 1);
 }
-.한가인-box {
+.한가인-box, .이정재-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -374,7 +383,7 @@ body {
   width: 100%;
   background-color: rgba(27, 175, 234, 0.2);
 }
-.한가인-bar {
+.한가인-bar, .이정재-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -382,7 +391,7 @@ body {
   border-radius: 10px;
   background-color: rgba(27, 175, 234, 1);
 }
-.김고은-box {
+.김고은-box, .폴킴-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -391,7 +400,7 @@ body {
   width: 100%;
   background-color: rgba(251, 176, 59, 0.2);
 }
-.김고은-bar {
+.김고은-bar, .폴킴-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -399,7 +408,7 @@ body {
   border-radius: 10px;
   background-color: rgba(251, 176, 59, 1);
 }
-.김다미-box {
+.김다미-box, .준호-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -408,7 +417,7 @@ body {
   width: 100%;
   background-color: rgba(195, 140, 102, 0.2);
 }
-.김다미-bar {
+.김다미-bar, .준호-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -416,7 +425,7 @@ body {
   border-radius: 10px;
   background-color: rgba(195, 140, 102, 1);
 }
-.채수빈-box {
+.채수빈-box, .이민기-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -425,7 +434,7 @@ body {
   width: 100%;
   background-color: rgba(49, 132, 155, 0.2);
 }
-.채수빈-bar {
+.채수빈-bar, .이민기-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -433,7 +442,7 @@ body {
   border-radius: 10px;
   background-color: rgba(49, 132, 155, 1);
 }
-.김태희-box {
+.김태희-box, .공유-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -442,7 +451,7 @@ body {
   width: 100%;
   background-color: rgba(235, 166, 190, 0.2);
 }
-.김태희-bar {
+.김태희-bar, .공유-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -452,7 +461,7 @@ body {
 }
 
 
-.류혜영-box {
+.류혜영-box, .조인성-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -461,7 +470,7 @@ body {
   width: 100%;
   background-color: rgba(190, 56, 170, 0.2);
 }
-.류혜영-bar {
+.류혜영-bar, .조인성-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -470,7 +479,7 @@ body {
   background-color: rgba(190, 56, 170, 1);
 }
 
-.서현진-box {
+.서현진-box, .이병헌-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -479,7 +488,7 @@ body {
   width: 100%;
   background-color: rgba(80, 90, 190, 0.2);
 }
-.서현진-bar {
+.서현진-bar, .이병헌-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -488,7 +497,7 @@ body {
   background-color: rgba(80, 90, 190, 1);
 }
 
-.손예진-box {
+.손예진-box, .소지섭-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -497,7 +506,7 @@ body {
   width: 100%;
   background-color: rgba(200, 130, 220, 0.2);
 }
-.손예진-bar {
+.손예진-bar, .소지섭-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -506,7 +515,7 @@ body {
   background-color: rgba(200, 130, 220, 1);
 }
 
-.아이유-box {
+.아이유-box, .박보검-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -515,7 +524,7 @@ body {
   width: 100%;
   background-color: rgba(235, 110, 110, 0.2);
 }
-.아이유-bar {
+.아이유-bar, .박보검-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -524,7 +533,7 @@ body {
   background-color: rgba(235, 110, 110, 1);
 }
 
-.이시하라사토미-box {
+.이시하라사토미-box, .서강준-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -533,7 +542,7 @@ body {
   width: 100%;
   background-color: rgba(190, 80, 150, 0.2);
 }
-.이시하라사토미-bar {
+.이시하라사토미-bar, .서강준-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -542,7 +551,7 @@ body {
   background-color: rgba(190, 80, 150, 1);
 }
 
-.쯔위-box {
+.쯔위-box, .유승호-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -551,7 +560,7 @@ body {
   width: 100%;
   background-color: rgba(210, 190, 166, 0.2);
 }
-.쯔위-bar {
+.쯔위-bar, .유승호-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -560,7 +569,7 @@ body {
   background-color: rgba(210, 190, 166, 1);
 }
 
-.포이-box {
+.포이-box, .이동욱-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -569,7 +578,7 @@ body {
   width: 100%;
   background-color: rgba(235, 220, 190, 0.2);
 }
-.포이-bar {
+.포이-bar, .이동욱-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -578,7 +587,7 @@ body {
   background-color: rgba(235, 220, 190, 1);
 }
 
-.한효주-box {
+.한효주-box, .강동원-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -587,7 +596,7 @@ body {
   width: 100%;
   background-color: rgba(190, 166, 235, 0.2);
 }
-.한효주-bar {
+.한효주-bar, .강동원-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -596,7 +605,7 @@ body {
   background-color: rgba(190, 166, 235, 1);
 }
 
-.헤이즈-box {
+.헤이즈-box, .박서준-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -605,7 +614,7 @@ body {
   width: 100%;
   background-color: rgba(190, 235, 166, 0.2);
 }
-.헤이즈-bar {
+.헤이즈-bar, .박서준-bar {
   position: absolute;
   top: 0;
   left: 0;

@@ -7,10 +7,10 @@
 		
 		<!-- 카카오톡 url 전송시 보여지는 이미지 -->
 		<meta property="og:url" content="https://godhyunseok.netlify.app/">
-		<meta property="og:title" content="닮은 꼴 여배우 찾기">
+		<meta property="og:title" content="닮은 꼴 연예인 찾기">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="kakao.jpg">
-		<meta property="og:description" content="내가 닮은 여배우는 누구일까?">
+		<meta property="og:description" content="내가 연예인은 누구일까?">
 		
 		<!-- 파비콘 -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -78,6 +78,22 @@
 			<h1 class="title">닮은꼴 연예인 찾기</h1>
 			<h2 class="subtitle">사진을 업로드하여 닮은꼴 연예인을 찾아보세요!</h2>
 		</section>
+		
+		<!-- 성별선택 -->
+		<h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+		<section class="d-flex justify-content-center">
+			<p class="d-flex align-items-center pr-3">여자</p>
+			<div>
+				<input type="checkbox" id="gender">
+				<label for="gender">
+					<span class="knob">
+						<i></i>
+					</span>
+				</label>
+			</div>
+			<p class="d-flex align-items-center pl-3">남자</p>
+    	</section>
+		
 
 		<script
 			class="jsbin"
@@ -96,8 +112,11 @@
 			
 			
 			<div class="file-upload-content">
+
 				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+				<img class="file-upload-image2" src="#" alt="your image" style="display:none;"/>
 				
+					
 				<!-- 스피너 -->
 				<div id="loading" class="animated bounce">
 					<div class="spinner-border" role="status">
@@ -120,12 +139,7 @@
 					</button>
 				</div>
 				
-				<!-- 기존 지우기 버튼 -->
-				<!-- <div class="image-title-wrap">
-					<button type="button" onclick="removeUpload()" class="remove-image">
-						Remove <span class="image-title">Uploaded Image</span>
-					</button>
-				</div> -->
+				
 			</div>
 		</div>
 		<div id="webcam-container"></div>
@@ -222,16 +236,28 @@
 			
 
 			// 머신 업데이트
-			const URL = "https://teachablemachine.withgoogle.com/models/FAZdLESLX/";
+			// const URL = "https://teachablemachine.withgoogle.com/models/FAZdLESLX/";
+			
+			// url 변수에 각기다른 머신 주소 삽입
+			let URL;
+			const urlMale = "https://teachablemachine.withgoogle.com/models/isHz03Sjo/";
+			const urlFemale = "https://teachablemachine.withgoogle.com/models/FAZdLESLX/";
+			
 			
 			let model, webcam, labelContainer, maxPredictions;
 
 			// Load the image model and setup the webcam
 			async function init() {
+				// 아이디 값이 젠더인 버튼 클릭
+				if (document.getElementById("gender").checked) {
+					URL = urlMale;
+				} else {
+					URL = urlFemale;
+				}
+				
+				
 				const modelURL = URL + 'model.json';
 				const metadataURL = URL + 'metadata.json';
-
-				
 				model = await tmImage.load(modelURL, metadataURL);
 				maxPredictions = model.getTotalClasses();
 
@@ -242,8 +268,11 @@
                		element.classList.add("d-flex");
 					
 					
-					// and class labels
-					labelContainer.appendChild(document.createElement('div'));
+					// elment 를 넣으니까 이름과 그래프가 스판방식으로 바뀜
+					labelContainer.appendChild(element);
+					
+					// 성별 전 기존 코드
+					// labelContainer.appendChild(document.createElement('div'));
 				}
 			}
 
@@ -254,60 +283,154 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a,b) => parseFloat(b.probability) - parseFloat(a.probability));
 				var resultMessage;
-				switch(prediction[0].className){
-					case "채수빈":
-						resultMessage = "채수빈";
-						break;
-					case "김다미":
-						resultMessage = "김다미";
-						break;
-					case "김태희":
-						resultMessage = "김태희";
-						break;
-					case "한가인":
-						resultMessage = "한가인";
-						break;
-					case "나연":
-						resultMessage = "나연";
-						break;
-					case "서현진":
-						resultMessage = "서현진";
-						break;
-					case "손예진":
-						resultMessage = "손예진";
-						break;
-					case "아이유":
-						resultMessage = "아이유";
-						break;
-					case "이시하라사토미":
-						resultMessage = "이시하라 사토미";
-						break;
-					case "쯔위":
-						resultMessage = "쯔위";
-						break;
-					case "포이":
-						resultMessage = "포이";
-						break;
-					case "한효주":
-						resultMessage = "한효주";
-						break;
-					case "헤이즈":
-						resultMessage = "헤이즈";
-						break;
-					case "김고은":
-						resultMessage = "김고은";
-						break;
-					case "김지원":
-						resultMessage = "김지원";
-						break;
-					case "류혜영":
-						resultMessage = "류혜영";
-						break;
-					default:
-						resultMessage = "닮은사람없음";
+				var imageMessage;
+				if (document.getElementById("gender").checked) {
+					console.log("남자 체크");
+					switch(prediction[0].className){
+						case "강동원":
+							resultMessage = "강동원";
+							imageMessage = "KangDongwon";
+							break;
+						case "공유":
+							resultMessage = "공유";
+							imageMessage = "GongYu";
+							break;
+						case "류준열":
+							resultMessage = "류준열";
+							imageMessage = "RyuJunyeol";
+							break;
+						case "박보검":
+							resultMessage = "박보검";
+							imageMessage = "ParkBogum";
+							break;
+						case "서강준":
+							resultMessage = "서강준";
+							imageMessage = "SeoKangjun";
+							break;
+						case "소지섭":
+							resultMessage = "소지섭";
+							imageMessage = "JisubSo";
+							break;
+						case "오혁":
+							resultMessage = "오혁";
+							imageMessage = "OhHyuk";
+							break;
+						case "유승호":
+							resultMessage = "유승호";
+							imageMessage = "YooSeungho";
+							break;
+						case "이민기":
+							resultMessage = "이민기";
+							imageMessage = "LeeMinki";
+							break;
+						case "이병헌":
+							resultMessage = "이병헌";
+							imageMessage = "LeeByunghun";
+							break;
+						case "이정재":
+							resultMessage = "이정재";
+							imageMessage = "LeeJungjae";
+							break;
+						case "조인성":
+							resultMessage = "조인성";
+							imageMessage = "JoInseong";
+							break;
+						case "준호":
+							resultMessage = "준호";
+							imageMessage = "JunHo";
+							break;
+						case "폴킴":
+							resultMessage = "폴킴";
+							imageMessage = "PaulKim";
+							break;
+						case "이동욱":
+							resultMessage = "이동욱";
+							imageMessage = "LeeDongwook";
+							break;	
+						case "박서준":
+							resultMessage = "박서준";
+							imageMessage = "ParkSeojoon";
+							break;								
+						default:
+							resultMessage = "닮은사람없음";					
 				}
+			} else{
+				console.log("여자 체크");
+				switch(prediction[0].className){
+						case "채수빈":
+							resultMessage = "채수빈";
+							imageMessage = "ChaeSoobin";
+							break;
+						case "김다미":
+							resultMessage = "김다미";
+							imageMessage = "KimDami";
+							break;
+						case "김태희":
+							resultMessage = "김태희";
+							imageMessage = "KimTaehee";
+							break;
+						case "한가인":
+							resultMessage = "한가인";
+							imageMessage = "HanGain";
+							break;
+						case "나연":
+							resultMessage = "나연";
+							imageMessage = "Nayeon";
+							break;
+						case "서현진":
+							resultMessage = "서현진";
+							imageMessage = "SeoHyunjin";
+							break;
+						case "손예진":
+							resultMessage = "손예진";
+							imageMessage = "SonYejin";
+							break;
+						case "아이유":
+							resultMessage = "아이유";
+							imageMessage = "IU";
+							break;
+						case "이시하라사토미":
+							resultMessage = "이시하라 사토미";
+							imageMessage = "IshiharaSatomi";
+							break;
+						case "쯔위":
+							resultMessage = "쯔위";
+							imageMessage = "Tzuyu";
+							break;
+						case "포이":
+							resultMessage = "포이";
+							imageMessage = "trunnion";
+							break;
+						case "한효주":
+							resultMessage = "한효주";
+							imageMessage = "HyoJooHan";
+							break;
+						case "헤이즈":
+							resultMessage = "헤이즈";
+							imageMessage = "haze";
+							break;
+						case "김고은":
+							resultMessage = "김고은";
+							imageMessage = "KimGoeun";
+							break;
+						case "김지원":
+							resultMessage = "김지원";
+							imageMessage = "KimJiwon";
+							break;
+						case "류혜영":
+							resultMessage = "류혜영";
+							imageMessage = "RyuHyeyoung";
+							break;
+						default:
+							resultMessage = "닮은사람없음";
+				}
+			}
 				
 				
+				
+				
+				$('.file-upload-image2').attr("src", "secondImages/" + imageMessage + ".jpg");
+				$('.file-upload-image2').show();
 				// 원래
 				$('.result-message').html(resultMessage);
 				
@@ -371,6 +494,56 @@
                         break;
 					case "헤이즈":
                         labelTitle = "헤이즈"
+                        break;
+						
+						
+                    case "강동원":
+                        labelTitle = "강동원"
+                        break;
+                    case "공유":
+                        labelTitle = "공유"
+                        break;
+                    case "류준열":
+                        labelTitle = "류준열"
+                        break;
+					case "박보검":
+                        labelTitle = "박보검"
+                        break;
+					case "서강준":
+                        labelTitle = "서강준"
+                        break;
+					case "소지섭":
+                        labelTitle = "소지섭"
+                        break;
+					case "오혁":
+                        labelTitle = "오혁"
+                        break;
+					case "유승호":
+                        labelTitle = "유승호"
+                        break;
+					case "이민기":
+                        labelTitle = "이민기"
+                        break;
+					case "이병헌":
+                        labelTitle = "이병헌"
+                        break;
+					case "이정재":
+                        labelTitle = "이정재"
+                        break;
+					case "조인성":
+                        labelTitle = "조인성"
+                        break;
+					case "준호":
+                        labelTitle = "준호"
+                        break;
+					case "폴킴":
+                        labelTitle = "폴킴"
+                        break;
+					case "이동욱":
+                        labelTitle = "이동욱"
+                        break;
+					case "박서준":
+                        labelTitle = "박서준"
                         break;
                     default:
                         labelTitle = "알수없음"
