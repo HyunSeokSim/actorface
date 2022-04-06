@@ -93,8 +93,19 @@
 					</h3>
 				</div>
 			</div>
+			
+			
 			<div class="file-upload-content">
 				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+				
+				<!-- 스피너 -->
+				<div id="loading" class="animated bounce">
+					<div class="spinner-border" role="status">
+					</div>
+					<p class="text-center">AI가 사진을 분석중입니다. 조금만 기다려주세요.</p>
+           		</div>
+				
+				
 				<p class="result-message"></p>
 				<div id="label-container"></div>
 				
@@ -173,7 +184,7 @@
 
 					reader.onload = function (e) {
 						$('.image-upload-wrap').hide();
-
+						$('#loading').show();
 						$('.file-upload-image').attr('src', e.target.result);
 						$('.file-upload-content').show();
 
@@ -184,6 +195,7 @@
 					init().then(function(){
 						console.log("hello");
 						predict();
+						$('#loading').hide();
 					});
 				} else {
 					removeUpload();
@@ -210,7 +222,7 @@
 			
 
 			// 머신 업데이트
-			const URL = "https://teachablemachine.withgoogle.com/models/y35kRa_Jw/";
+			const URL = "https://teachablemachine.withgoogle.com/models/FAZdLESLX/";
 			
 			let model, webcam, labelContainer, maxPredictions;
 
@@ -255,8 +267,41 @@
 					case "한가인":
 						resultMessage = "한가인";
 						break;
+					case "나연":
+						resultMessage = "나연";
+						break;
+					case "서현진":
+						resultMessage = "서현진";
+						break;
+					case "손예진":
+						resultMessage = "손예진";
+						break;
+					case "아이유":
+						resultMessage = "아이유";
+						break;
+					case "이시하라 사토미":
+						resultMessage = "이시하라 사토미";
+						break;
+					case "쯔위":
+						resultMessage = "쯔위";
+						break;
+					case "포이":
+						resultMessage = "포이";
+						break;
+					case "한효주":
+						resultMessage = "한효주";
+						break;
+					case "헤이즈":
+						resultMessage = "헤이즈";
+						break;
 					case "김고은":
 						resultMessage = "김고은";
+						break;
+					case "김지원":
+						resultMessage = "김지원";
+						break;
+					case "류혜영":
+						resultMessage = "류혜영";
 						break;
 					default:
 						resultMessage = "닮은사람없음";
@@ -293,6 +338,39 @@
                         break;
 					case "김고은":
                         labelTitle = "김고은"
+                        break;
+					case "김지원":
+                        labelTitle = "김지원"
+                        break;
+					case "나연":
+                        labelTitle = "나연"
+                        break;
+					case "류혜영":
+                        labelTitle = "류혜영"
+                        break;
+					case "서현진":
+                        labelTitle = "서현진"
+                        break;
+					case "손예진":
+                        labelTitle = "손예진"
+                        break;
+					case "아이유":
+                        labelTitle = "아이유"
+                        break;
+					case "이시하라 사토미":
+                        labelTitle = "이시하라 사토미"
+                        break;
+					case "쯔위":
+                        labelTitle = "쯔위"
+                        break;
+					case "포이":
+                        labelTitle = "포이"
+                        break;
+					case "한효주":
+                        labelTitle = "한효주"
+                        break;
+					case "헤이즈":
+                        labelTitle = "헤이즈"
                         break;
                     default:
                         labelTitle = "알수없음"

@@ -331,7 +331,7 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.dinosaur-box {
+.나연-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -340,7 +340,7 @@ body {
   width: 100%;
   background-color: rgba(117, 204, 84, 0.2);
 }
-.dinosaur-bar {
+.나연-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -348,22 +348,22 @@ body {
   border-radius: 10px;
   background-color: rgba(117, 204, 84, 1);
 }
-.deer-box {
+.김지원-box {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
+  background-color: rgba(88, 180, 120, 0.2);
 }
-.deer-bar {
+.김지원-bar {
   position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
+  background-color: rgba(88, 180, 120, 1);
 }
 .한가인-box {
   position: absolute;
@@ -450,6 +450,178 @@ body {
   border-radius: 10px;
   background-color: rgba(235, 166, 190, 1);
 }
+
+
+.류혜영-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(190, 56, 170, 0.2);
+}
+.류혜영-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(190, 56, 170, 1);
+}
+
+.서현진-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(80, 90, 190, 0.2);
+}
+.서현진-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(80, 90, 190, 1);
+}
+
+.손예진-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(200, 130, 220, 0.2);
+}
+.손예진-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(200, 130, 220, 1);
+}
+
+.아이유-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 110, 110, 0.2);
+}
+.아이유-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 110, 110, 1);
+}
+
+.사토미-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(190, 80, 150, 0.2);
+}
+.사토미-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(190, 80, 150, 1);
+}
+
+.쯔위-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(210, 190, 166, 0.2);
+}
+.쯔위-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(210, 190, 166, 1);
+}
+
+.포이-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 220, 190, 0.2);
+}
+.포이-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 220, 190, 1);
+}
+
+.한효주-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(190, 166, 235, 0.2);
+}
+.한효주-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(190, 166, 235, 1);
+}
+
+.헤이즈-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(190, 235, 166, 0.2);
+}
+.헤이즈-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(190, 235, 166, 1);
+}
+
+
+
+
+
+
+
+
+
 .percent-text {
   font-size: 1rem;
   color: #ffffff;
